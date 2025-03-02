@@ -565,7 +565,6 @@ h2.heading {
 }
 
 .about .image {
-    flex: 1;
     text-align: center;
 }
 
@@ -670,14 +669,9 @@ h2.heading {
         font-size: 1.5rem;
     }
 }
-
-.animate {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+h3.ex{
+        padding-bottom: 8px;
 }
-
-.animate.visible {
-    opacity: 1;
-    transform: translateY(0);
+h4.position{
+    padding-bottom: 8px;
 }

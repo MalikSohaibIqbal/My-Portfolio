@@ -552,9 +552,11 @@ h2.heading {
 
 /* about */
 .about {
-    padding: 50px 10%;
-    color: white;
+    padding: 60px 10%;
+    color: #ffffff;
     text-align: center;
+    position: relative;
+    overflow: hidden;
 }
 
 .about .row {
@@ -562,86 +564,93 @@ h2.heading {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    gap: 40px;
 }
 
-.about .image {
-    text-align: center;
-}
-
-.about .image img {
-    width: 100%;
-    max-width: 300px;
-    border-radius: 50%;
-    border: 4px solid #468bb3;
-    animation: slideRight 1.2s ease-in-out forwards;
-}
-
-@keyframes slideRight {
-    from {
-        transform: translateX(-100px);
-        /* Start position (left) */
-        opacity: 0;
-    }
-
-    to {
-        transform: translateX(0);
-        /* End position */
-        opacity: 1;
-    }
-}
-
-@keyframes slideLeft {
-    from {
-        transform: translateX(100px);
-        /* Start position (right) */
-        opacity: 0;
-    }
-
-    to {
-        transform: translateX(0);
-        /* End position */
-        opacity: 1;
-    }
-}
-
+/* Content Styles */
 .about .content {
     flex: 2;
     text-align: left;
     padding-left: 40px;
-    animation: slideLeft 1.5s ease-in-out forwards;
+    animation: slideLeft 1.5s ease-out forwards;
+    opacity: 0;
 }
 
 .about .content h3 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #468bb3;
+    margin-bottom: 10px;
+    transition: color 0.3s;
+    font-family: "Libre Bodoni", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.about .content h3:hover {
+    color: #10527e;
 }
 
 .about .content .tag {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: bold;
-    color: white;
-    background: 468bb3;
-    border-radius: 5px;
+    color: #ffffff;
+    background: #468bb3;
+    padding: 5px 15px;
+    border-radius: 30px;
     display: inline-block;
     margin: 10px 0;
+    transition: background 0.3s;
+}
+
+.about .content .tag:hover {
+    background: #10527e;
 }
 
 .about .content p {
     font-size: 1rem;
-    line-height: 1.6;
+    line-height: 1.8;
     opacity: 0.8;
+    margin-bottom: 20px;
+    position: relative;
 }
 
+.about .content p::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 40px;
+    height: 2px;
+    background: #468bb3;
+    transition: width 0.3s;
+}
+
+.about .content p:hover::before {
+    width: 100%;
+}
+
+/* Box Container Styles */
 .about .box-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 10px;
+    gap: 20px;
+    margin-top: 20px;
+    justify-content: start;
 }
 
 .about .box-container .box {
     flex: 1;
     min-width: 250px;
+    padding: 15px;
+    background: #2c2c3e;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.about .box-container .box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4);
 }
 
 .about .box span {
@@ -649,29 +658,58 @@ h2.heading {
     color: #468bb3;
 }
 
+/* Keyframe Animations */
+@keyframes slideRight {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
+    .about{
+        padding: 60px 5%;
+    }
     .about .row {
         flex-direction: column;
         text-align: center;
+        gap: 20px;
     }
 
     .about .content {
         padding-left: 0;
-    }
-
-    .about {
-        padding: 30px 10%;
+        animation: slideUp 1.2s ease-out forwards;
     }
 
     .about .content h3 {
         padding-top: 20px;
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 }
-h3.ex{
-        padding-bottom: 8px;
-}
-h4.position{
-    padding-bottom: 8px;
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }

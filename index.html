@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malik Sohaib Iqbal Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Sigmar&display=swap');
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="particles-js"></div>
+    <header class="header">
+        <a href="#home" class="logo">Sohaib <span>Iqbal</span></a>
+
+        <nav class="navbar">
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#resume">Resume</a></li>
+            </ul>
+        </nav>
+
+        <button class="menu-btn" id="menuBtn">☰</button>
+    </header>
+    <nav class="mobile-menu" id="mobileMenu">
+        <button class="close-btn" id="closeBtn">✖</button>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li> 
+            <li><a href="#education">Education</a></li>
+            <li><a href="#resume">Resume</a></li> 
+            
+        </ul>
+    </nav>
+    <div class="hero" id="home">
+        <div class="hero-content">
+            <h1>Hi, It's <span>Malik Sohaib Iqbal</span></h1>
+            <h2>I'm a <span class="typing"></span></h2>
+            <p>Passionate about creating functional and visually appealing web experiences. I specialize in WordPress
+                development and frontend design.</p>
+
+            <div class="social-links">
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" class="social-icon"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/yourprofile" target="_blank" class="social-icon"><i
+                        class="fab fa-github"></i></a>
+                <a href="https://instagram.com/yourprofile" target="_blank" class="social-icon"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/yourprofile" target="_blank" class="social-icon"><i
+                        class="fab fa-twitter"></i></a>
+            </div>
+
+            <div class="buttons">
+                <a href="#hire" class="btn hire-btn">Hire</a>
+                <a href="#contact" class="btn contact-btn">Contact</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="assets/images/Sohaib.jpg" alt="Malik Sohaib">
+        </div>
+    </div>
+    <section class="about" id="about">
+        <h2 class="heading"><i class="fas fa-user-alt"></i> About <span>Me</span></h2>
+
+        <div class="row">
+            <div class="image">
+                <img draggable="false" src="./assets/images/profile.jpg" alt="Profile Image">
+            </div>
+
+            <div class="content">
+                <h3>I'm Malik Sohaib Iqbal</h3>
+                <span class="tag">Software Engineer</span>
+
+                <p>
+                    I am an SQA Engineer based in Lahore, Pakistan.
+                    I am a Software Engineering undergraduate from Virtual University.
+                    I am very passionate about improving my testing skills and working on personal projects to enhance
+                    my expertise.
+                </p>
+
+                <div class="box-container">
+                    <div class="box">
+                        <p><span>Email: </span> sohaib.bronze92@gmail.com</p>
+                        <p><span>Location: </span> Lahore - Pakistan</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="timeline" id="resume">
+        <h2 class="heading"><i class="fas fa-laptop-code"></i> Experience</h2>
+        <div class="timeline-line"></div>
+
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3> Jul 2024 - Aug 2024</h3>
+                <h4>Web Development Intern</h4>
+                <p>Prodigy InfoTech</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3>2021 - present</h3>
+                <h4>Manager</h4>
+                <p>Al-Malik Scientific & ELectronics</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3>2019 - 2021</h3>
+                <h4>Junior Electrical Engineer</h4>
+                <p>Al-Malik Scientific & ELectronics</p>
+            </div>
+        </div>
+    </section>
+    <script src="script.js" defer></script>
+</body>
+
+</html>

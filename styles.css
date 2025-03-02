@@ -728,3 +728,72 @@ h2.heading {
         opacity: 1;
     }
 }
+/* Education Section Styles */
+.education {
+    padding: 50px 10%;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.education .heading {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #468bb3;
+    position: relative;
+    display: inline-block;
+}
+
+.education .heading span {
+    color: #eeeeee;
+}
+
+.education-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding-top: 30px;
+}
+
+.education-item {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    padding: 20px;
+    border: 2px solid #468bb3;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.education-item:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 5px 25px rgba(66, 186, 255, 0.815);
+}
+
+.education-item h3 {
+    color: #468bb3;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.education-item h4 {
+    color: #eeeeee;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.education-item p {
+    font-size: 1rem;
+    color: #c7c7c7;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .education {
+        padding: 30px 5%;
+    }
+
+    .education .heading {
+        font-size: 2rem;
+    }
+}

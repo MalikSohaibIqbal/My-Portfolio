@@ -766,7 +766,7 @@ h2.heading {
 
 .education-item:hover {
     transform: translateY(-10px) scale(1.05);
-    box-shadow: 0 5px 25px rgba(66, 186, 255, 0.815);
+    box-shadow: 0 10px 25px rgba(66, 186, 255, 0.815);
 }
 
 .education-item h3 {

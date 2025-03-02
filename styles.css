@@ -454,7 +454,7 @@ h2.heading {
     position: absolute;
     left: 50%;
     width: 4px;
-    height: 100%;
+    height: 80%;
     background: linear-gradient(to bottom, #468bb3, #2692d1);
     transform: translateX(-50%);
     z-index: -1;
@@ -583,7 +583,6 @@ h2.heading {
     position: relative;
     overflow: hidden;
 }
-
 .about .row {
     display: flex;
     align-items: center;
@@ -599,6 +598,12 @@ h2.heading {
     padding-left: 40px;
     animation: slideLeft 1.5s ease-out forwards;
     opacity: 0;
+}
+.heading1{
+    color: #468bb3;
+}
+.me{
+    color: #ffffff;
 }
 
 .about .content h3 {
@@ -726,6 +731,9 @@ h2.heading {
         padding-top: 20px;
         font-size: 2rem;
     }
+    .heading1{
+        font-size: 2rem;
+    }
 }
 
 @keyframes slideUp {
@@ -771,7 +779,7 @@ h2.heading {
     padding: 20px;
     border: 2px solid #468bb3;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
 }
 
 .education-item:hover {

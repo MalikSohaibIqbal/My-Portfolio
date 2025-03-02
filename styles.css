@@ -447,8 +447,8 @@ h2.heading {
     position: relative;
     width: 60%;
     margin: 50px auto;
+    padding: 20px 0;
 }
-
 
 .timeline-line {
     position: absolute;
@@ -457,8 +457,8 @@ h2.heading {
     height: 100%;
     background: linear-gradient(to bottom, #468bb3, #2692d1);
     transform: translateX(-50%);
+    z-index: -1;
 }
-
 
 .timeline-item {
     position: relative;
@@ -467,14 +467,14 @@ h2.heading {
     margin: 40px 0;
     opacity: 0;
     transform: translateY(30px);
-    transition: all 0.6s ease-in-out;
+    transition: all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+    perspective: 1000px;
 }
 
 .timeline-item.active {
     opacity: 1;
     transform: translateY(0);
 }
-
 
 .timeline-dot {
     position: absolute;
@@ -483,28 +483,45 @@ h2.heading {
     height: 15px;
     background: #468bb3;
     border-radius: 50%;
-    box-shadow: 0 0 15px #468bb3;
+    box-shadow: 0 0 15px #468bb3, 0 0 30px rgba(70, 139, 179, 0.5);
     transform: translateX(-50%);
+    transition: box-shadow 0.3s ease;
+    z-index: 1;
 }
 
-/* Timeline Content Box */
 .timeline-content {
     width: 45%;
-    background: rgba(0, 0, 0, 0.8);
     padding: 20px;
     border-radius: 25px;
-    border: 2px solid #468bb3;
-    box-shadow: 0 0 10px #468bb3;
+    border: 2px solid rgba(70, 139, 179, 0.6);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     text-align: center;
     position: relative;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease;
+    color: #eaeaea;
+    overflow: hidden;
 }
 
 .timeline-content:hover {
     transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    background: linear-gradient(135deg, #6e8efb, #468bb3);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, rgba(110, 142, 251, 0.8), rgba(70, 139, 179, 0.8));
     color: #fff;
+}
+
+.timeline-content::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 10%, transparent 10%);
+    background-size: 50px 50px;
+    opacity: 0.2;
+    transform: rotate(45deg);
 }
 
 .timeline-item:nth-child(even) .timeline-content {
@@ -540,8 +557,6 @@ h2.heading {
     h2.heading {
         text-align: center;
         font-size: 1.5rem;
-        padding-bottom: inherit;
-        padding-top: 0px;
         padding-bottom: 25px;
     }
 

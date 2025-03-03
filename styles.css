@@ -602,7 +602,11 @@ h2.heading {
     opacity: 0;
 }
 .heading1{
+    font-size: 2.5rem;
+    margin-bottom: 30px;
     color: #468bb3;
+    position: relative;
+    display: inline-block;
 }
 .me{
     color: #ffffff;
@@ -833,6 +837,7 @@ h2.heading {
     border-radius: 16px;
     background: rgba(0, 0, 0, 0.6);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    display: grid;
 }
 
 .skills-title {

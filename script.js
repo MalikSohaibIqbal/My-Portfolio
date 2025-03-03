@@ -131,3 +131,20 @@ document.addEventListener("DOMContentLoaded", function () {
         header.classList.toggle("scrolled", window.scrollY > 50);
     });
 });
+document.addEventListener('DOMContentLoaded', () => {
+    const skillElements = document.querySelectorAll('.skill');
+    const options = {
+        threshold: 1 // Trigger when 50% of section is visible
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+                observer.unobserve(entry.target); // Run only once
+            }
+        });
+    }, options);
+
+    skillElements.forEach(skill => observer.observe(skill));
+});

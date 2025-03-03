@@ -584,6 +584,7 @@ h2.heading {
     text-align: center;
     position: relative;
     overflow: hidden;
+    animation: bounce 2.0s ease-in-out;
 }
 .about .row {
     display: flex;
@@ -766,6 +767,7 @@ h2.heading {
     color: #468bb3;
     position: relative;
     display: inline-block;
+    animation: bounce 1.0s ease-in-out;
 }
 
 .education .heading span {
@@ -777,6 +779,7 @@ h2.heading {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     padding-top: 30px;
+    animation: bounce 1.5s ease-in-out;
 }
 
 .education-item {
@@ -858,6 +861,14 @@ h2.heading {
     margin-bottom: 20px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s, box-shadow 0.3s;
+    animation: bounce 1.5s ease-in-out;
+    opacity: 0;
+    transform: translateY(50px);
+
+}
+.skill.animate {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .skill:hover {

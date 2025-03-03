@@ -449,14 +449,14 @@ h2.heading {
     position: relative;
     width: 60%;
     margin: 50px auto;
-    padding: 20px 0;
+    padding: 200px 5%;
 }
 
 .timeline-line {
     position: absolute;
     left: 50%;
     width: 4px;
-    height: 80%;
+    height: 50%;
     background: linear-gradient(to bottom, #468bb3, #2692d1);
     transform: translateX(-50%);
     z-index: -1;
@@ -579,7 +579,7 @@ h2.heading {
 
 /* about */
 .about {
-    padding: 60px 5%;
+    padding: 200px 5%;
     color: #ffffff;
     text-align: center;
     position: relative;
@@ -755,7 +755,7 @@ h2.heading {
 }
 /* Education Section Styles */
 .education {
-    padding: 50px 10%;
+    padding: 200px 10%;
     color: white;
     text-align: center;
     position: relative;

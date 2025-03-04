@@ -496,7 +496,6 @@ h2.heading {
     padding: 20px;
     border-radius: 25px;
     border: 2px solid rgba(70, 139, 179, 0.6);
-    /* background: rgba(255, 255, 255, 0.1); */
     backdrop-filter: blur(8px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     text-align: center;

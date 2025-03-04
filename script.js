@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
-    /* Title and Favicon Blink on Blur */
+    
     const originalTitle = document.title;
     const originalFavicon = document.querySelector("link[rel='icon']") || document.createElement("link");
     let blinkInterval;
 
     originalFavicon.rel = "icon";
-    originalFavicon.href = "favicon.ico"; // Set your actual favicon
+    originalFavicon.href = "favicon.ico"; 
     document.head.appendChild(originalFavicon);
 
     window.addEventListener("blur", function () {
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
         originalFavicon.href = "favicon.ico";
     });
 
-    /* Mobile Menu Toggle */
+    
     const menuBtn = document.getElementById("menuBtn");
     const closeBtn = document.getElementById("closeBtn");
     const mobileMenu = document.getElementById("mobileMenu");
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
     closeBtn.addEventListener("click", () => mobileMenu.classList.remove("active"));
     menuLinks.forEach(link => link.addEventListener("click", () => mobileMenu.classList.remove("active")));
 
-    /* Typing Effect */
+    
     const textElement = document.querySelector(".typing");
     const textArray = ["WordPress Developer", "Junior Frontend Developer", "UI/UX Designer", "QA Tester"];
     let textIndex = 0, charIndex = 0, isDeleting = false, lastTime = 0;
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     requestAnimationFrame(typeEffect);
 
-    /* Particles Effect */
+    
     tsParticles.load("particles-js", {
         particles: {
             number: { value: 80, density: { enable: true, value_area: 900 } },
@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    /* 3D Image Tilt Effect */
+    
     const profilePic = document.querySelector(".hero-image,.timeline-content");
     profilePic.addEventListener("mousemove", (e) => {
         const { width, height, left, top } = profilePic.getBoundingClientRect();
@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
         profilePic.style.transform = "perspective(500px) rotateX(0deg) rotateY(0deg)";
     });
 
-    /* Timeline Animation */
+    
     const timelineItems = document.querySelectorAll(".timeline-item,.timeline-content");
     const progressLine = document.querySelector(".timeline-progress,.timeline-content");
 
@@ -119,13 +119,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     timelineItems.forEach((item) => observer.observe(item));
 
-    /* Smooth Scroll to Resume */
+
     document.querySelector(".resume-button").addEventListener("click", function (e) {
         e.preventDefault();
         document.querySelector("#resume").scrollIntoView({ behavior: "smooth" });
     });
 
-    /* Header Scroll Effect */
     const header = document.querySelector(".header");
     window.addEventListener("scroll", () => {
         header.classList.toggle("scrolled", window.scrollY > 50);
@@ -134,14 +133,14 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener('DOMContentLoaded', () => {
     const skillElements = document.querySelectorAll('.skill');
     const options = {
-        threshold: 1 // Trigger when 50% of section is visible
+        threshold: 1 
     };
 
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('animate');
-                observer.unobserve(entry.target); // Run only once
+                observer.unobserve(entry.target); 
             }
         });
     }, options);

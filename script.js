@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     
     const textElement = document.querySelector(".typing");
-    const textArray = ["WordPress Developer", "Junior Frontend Developer", "UI/UX Designer", "QA Tester"];
+    const textArray = ["WordPress Developer", "Junior Frontend Developer", "QA Tester"];
     let textIndex = 0, charIndex = 0, isDeleting = false, lastTime = 0;
 
     function typeEffect(timestamp) {

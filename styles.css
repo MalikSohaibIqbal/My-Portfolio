@@ -9,7 +9,7 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Body Styling */
+
 body {
     font-family: Arial, sans-serif;
     background-color: black;
@@ -17,7 +17,6 @@ body {
     position: relative;
 }
 
-/* Header Styling */
 .header {
     display: flex;
     justify-content: space-between;

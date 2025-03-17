@@ -85,7 +85,6 @@ body {
     border-radius: 5px;
 }
 
-/* Hide Hamburger by Default */
 .menu-btn {
     display: none;
     font-size: 2rem;

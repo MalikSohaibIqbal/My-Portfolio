@@ -34,9 +34,7 @@ body {
 
 .header.scrolled {
     background: black;
-    /* Change to black when scrolling */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    /* Add shadow effect */
 }
 .logo {
     font-size: 1.8rem;

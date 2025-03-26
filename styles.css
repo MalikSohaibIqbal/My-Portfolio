@@ -94,7 +94,6 @@ body {
     cursor: pointer;
 }
 
-/* Mobile Sidebar (Hidden by Default) */
 .mobile-menu {
     z-index: 1001;
     position: fixed;
